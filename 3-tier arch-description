@@ -1,0 +1,12 @@
+#https://jayvanblaricum.medium.com/build-a-3-tier-aws-architecture-using-terraform-46ddebc5d561
+VPC with CIDR 10.0.0.0/16 and Name=week17-vpc
+created 2 public subnets with CIDR 10.0.1.0/24 (public-subnet-1) and 10.0.2.0/24(public_subnet_2), and a private subnet with CIDR ‘10.0.3.0/24’ (private_subnet_1).
+created an Internet Gateway and provided VPC id .
+done route table associations for the 2 public subnets in order to connect to internet
+created NAT Gateway and associated it with route tables of both public and private subnets
+created a Transport layer security
+created 2 ec2 instances one in each public subnets.
+Provided an EC2 key pair resource. A key pair is used to control login access to EC2 instances.
+created rds db instance
+configured a security group for the RDS instance to allow access through specified ports.
+created alb and associated it with two public subnets.
